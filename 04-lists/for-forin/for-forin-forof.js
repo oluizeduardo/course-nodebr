@@ -6,9 +6,9 @@ async function main(){
         const resultJSON = await service.getPokemons()
 
         // For to get only the names.
-        // for(let i=0; i < resultJSON.results.length; i++){
-        //     console.log(resultJSON.results[i].name);
-        // }
+        for(let i=0; i <= resultJSON.results.length-1; i++){
+            console.log('['+(i+1)+'] '+resultJSON.results[i].name);
+        }
 
         // // ForIn to get only the names.
         // for (const i in resultJSON.results) {
@@ -16,9 +16,9 @@ async function main(){
         // }
 
         // // ForOf to get only the names.
-        for (const pokemon of resultJSON.results) {
-            console.log(pokemon.name);
-        }
+        // for (const pokemon of resultJSON.results) {
+        //     console.log(pokemon.name);
+        // }
     
     } catch (error) {
         console.error('An error occured while consulting the list of Pokemons.', error);
