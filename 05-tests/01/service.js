@@ -19,11 +19,9 @@ async function getPokemon(){
         const res = item.name.toLowerCase().indexOf('bulbasaur') !== -1
         return res
     })
-    // console.log('Filter: '+JSON.stringify(filteredPokemons));
     
     // It maps the list in order to return only what really matters.
     const mappedPokemons = filteredPokemons.map(mapPokemon)
-    // console.log('Map: '+JSON.stringify(mappedPokemons));
 
     return mappedPokemons
 }
